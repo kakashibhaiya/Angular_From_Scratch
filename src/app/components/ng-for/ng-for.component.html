@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-3">
+        <ul>
+            <li *ngFor = "let city of cityList">{{city}}</li>
+        </ul>
+    </div>
+    <div class="col-6">
+        <button class="btn btn-success mx-1" *ngFor = "let city of cityList">
+            {{city}}
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <select>
+            <option *ngFor = "let emp of empList" [value] = "emp.empId">
+                {{emp.empName}}
+            </option>
+        </select>
+    </div>
+    <div class="col-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>sr No.</th>
+                    <th>Name</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let employee of empList; let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{employee.empName}}</td>
+                    <td>{{employee.empCity}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

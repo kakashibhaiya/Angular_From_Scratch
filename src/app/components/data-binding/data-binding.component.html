@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-6">
+         1.Interpolation
+         <p>firstName=>{{firstName}} </p>
+         <p>{{isActive}}</p>
+    </div>
+    <div class="col-6">
+        2.Property Binding
+        <br>
+       <input type = "text" [value] = "firstName" name ="" id="">
+       <input type = "text" [placeholder] = "myPlaceholder" name ="" id="">
+       <div [class] = "div1Class" style = "height:100px; width:100px;" ></div>
+    </div>
+</div>
+<div class="row">
+    3.Event Binding
+    <div class="col-3">
+        <button class="btn btn-success" (click) = "showWelcome()">clickMe</button>
+    </div>
+    <div>
+      <select (change) = "onChangeCity()">
+        <option value = "Pune">Pune</option>
+        <option value = "Nagpur">Nagpur</option>
+        <option value = "Mumbai">Mumbai</option>
+        <option value = "Agra">Agra</option>
+    </select>
+    </div>
+</div>
+<div class="row">
+    4.Two way binding
+    <div class="col-3">
+        <input type="text" [(ngModel)] = "firstName">
+    </div>
+    <div class="col-3">
+       <select [(ngModel)] = "selectedCity">
+        <option value = "Pune">Pune</option>
+        <option value = "Nagpur">Nagpur</option>
+        <option value = "Mumbai">Mumbai</option>
+        <option value = "Agra">Agra</option>
+       </select>
+       -:{{selectedCity}}
+    </div>
+    
+</div>
