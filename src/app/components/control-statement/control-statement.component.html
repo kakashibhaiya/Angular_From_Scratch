@@ -1,0 +1,67 @@
+
+<div class="row">
+    <div class="col-3">
+        @if(divVisible == true){
+            <div class="bg-success p-3">
+                Div 1
+            </div>
+        }
+        
+    </div>
+    <div class="col-3">
+        @if(isChecked == true){
+            <div class="bg-success p-3">
+                CheckBOx is checked
+            </div>
+        }
+        @else{
+            <div class="bg-danger p-3">
+                CheckBOx is checked
+            </div>
+        }
+        
+    </div>
+    <div class="col-3">
+        @if(dayName == 'mon') {
+            <span>Monday</span>
+        } @else if(dayName == 'tue') {
+            <span>Tuesday</span>
+        } @else if(dayName == 'wed') {
+            <span>Wednesday</span>
+        } @else if(dayName == 'thu') {
+            <span>Thursday</span>
+        } @else if(dayName == 'fri') {
+            <span>Friday</span>
+        } @else if(dayName == 'sat') {
+            <span>Saturday</span>
+        } @else if(dayName == 'sun') {
+            <span>Sunday</span>
+        } @else {
+            <span>Invalid Day</span>
+        }
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-3 pt-3">
+        <button class="btn btn-success" (click) = "hideshowDiv1(true)">Show</button>
+        <button class="btn btn-danger" (click) = "hideshowDiv1(false)">Flase</button>
+    </div>
+    <div class="col-3">
+       <input type = "checkbox" [(ngModel)] = "isChecked" />
+    </div>
+    <div class="col-3">
+        <input type = "text" [(ngModel)] = "dayName" maxlength="3" placeholder="enter 3 char of days"/>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <select>
+            @for(item of cityList; track $index){
+                <option>{{item}}</option>
+            }
+        </select>
+    </div>
+</div>
