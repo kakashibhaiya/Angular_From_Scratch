@@ -4,6 +4,7 @@ import { UserComponent } from './components/user/user.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { NgIfComponent } from './components/ng-if/ng-if.component';
 import { ControlStatementComponent } from './components/control-statement/control-statement.component';
+import { SignalComponent } from './components/signal/signal.component';
 
 
 export const routes: Routes = [
@@ -31,6 +32,10 @@ export const routes: Routes = [
   {
     path:'controlstatements',
     component:ControlStatementComponent
+  },
+  {
+    path: 'signal',
+    component: SignalComponent
   }
 
 

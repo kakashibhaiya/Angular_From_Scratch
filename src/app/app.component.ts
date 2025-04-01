@@ -8,13 +8,15 @@ import { NgForComponent } from './components/ng-for/ng-for.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { ControlStatementComponent } from './components/control-statement/control-statement.component';
+import { SignalComponent } from './components/signal/signal.component';
+import { LinkedSignalComponent } from './components/linked-signal/linked-signal.component';
 //import { DatabindingComponent } from './databinding/databinding.component';
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [DataBindingComponent,NgIfComponent,NgForComponent,NgClassComponent, NgStyleComponent,ControlStatementComponent],
+  imports: [DataBindingComponent,NgIfComponent,NgForComponent,NgClassComponent, NgStyleComponent,ControlStatementComponent, SignalComponent, LinkedSignalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true
